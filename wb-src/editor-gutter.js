@@ -10,7 +10,7 @@ let bg = palette.primaryBg;
 
 module.exports = {
   "editorGutter.background": bg,
-  "editorGutter.modifiedBackground": chroma('0000ff'),
-  "editorGutter.addedBackground": chroma('00ff00'),
-  "editorGutter.deletedBackground": chroma('ff0000'), 
+  "editorGutter.modifiedBackground": palette.ansiBlue.desaturate(0.5).darken(1.5),
+  "editorGutter.addedBackground": palette.ansiGreen.desaturate(0.5).darken(1.5),
+  "editorGutter.deletedBackground": palette.ansiRed.desaturate(0.5).darken(1.5),
 };
