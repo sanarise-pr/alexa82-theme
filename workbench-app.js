@@ -18,6 +18,7 @@ let settings = stringifyColors(Object.assign({}, ...[
   require('./wb-src/editor-overview-ruler.js'),
   require('./wb-src/editor-warnings.js'),
   require('./wb-src/editor-gutter.js'),
+  require('./wb-src/editor-widget.js'),
   require('./wb-src/status-bar'),
   require('./wb-src/title-bar')
 ]));
