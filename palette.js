@@ -9,7 +9,7 @@ let primaryBg = chroma('333945');
 let groundBg = primaryBg.brighten(1.4).desaturate(0.15);
 log.val('groundBg', groundBg.hex());
 
-let lightBg = primaryBg.brighten(3.4).desaturate(0.3);
+let lightBg = primaryBg.brighten(3.3).desaturate(0.3);
 log.val('lightBg', lightBg.hex());
 
 let titleBg = lightBg.desaturate().brighten(0.15);
@@ -64,6 +64,7 @@ module.exports = {
   ansiOrange: orangeFg,
   ansiMarine: chroma("93A1D2"),
   ansiCherry: chroma("c18190"),
+  ansiEmerald: chroma("81c196"),
 
   // Syntax
   comentsFg: comentsFg,

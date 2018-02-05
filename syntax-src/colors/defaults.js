@@ -77,7 +77,7 @@ module.exports = [
   {
     "scope": "entity.other.attribute-name",
     "settings": {
-      "foreground": palette.ansiMarine
+      "foreground": palette.ansiEmerald
     }
   },
   {
@@ -171,7 +171,7 @@ module.exports = [
     "name": "brackets of XML/HTML tags",
     "scope": "punctuation.definition.tag",
     "settings": {
-      "foreground": palette.ansiMarine
+      "foreground": palette.ansiWhite
     }
   },
   {
@@ -214,7 +214,7 @@ module.exports = [
     "name": "### Function keyword",
     "scope": "storage.type.function",
     "settings": {
-      "foreground": palette.ansiCyan
+      "foreground": palette.ansiBrightWhite
     }
   },
   {
@@ -248,7 +248,7 @@ module.exports = [
       "string.quoted.double.handlebars"
     ],
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.ansiYellow
     }
   },
   {

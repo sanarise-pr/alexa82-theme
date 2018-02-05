@@ -7,7 +7,7 @@ log.title('Editor Widget Colors');
 let bg = palette.lightBg.darken(0.25);
 let br = bg.darken(0.5);
 
-let hoverBg = palette.primaryBg.brighten(0.5).desaturate(0.1);
+let hoverBg = palette.primaryBg.brighten().desaturate(0.05);
 let hoverBr = hoverBg.darken(0.25);
 
 // log.val('contrast', chroma.contrast(bg, fg));

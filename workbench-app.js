@@ -20,7 +20,8 @@ let settings = stringifyColors(Object.assign({}, ...[
   require('./wb-src/editor-gutter.js'),
   require('./wb-src/editor-widget.js'),
   require('./wb-src/status-bar'),
-  require('./wb-src/title-bar')
+  require('./wb-src/title-bar'),
+  require('./wb-src/git')
 ]));
 writeSettings(SETTINGS_FILE, Object.assign({}, workbenchDefaults, settings));
 

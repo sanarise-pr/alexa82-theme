@@ -5,7 +5,7 @@ const chroma = require('chroma-js');
 log.title("Side Bar");
 
 let bg = palette.lightBg;
-let fg = bg.set('hsl.l', '-0.7');
+let fg = bg.darken(5);
 
 let dropBg = bg.set('hsl.s', '+0.1');
 let br = palette.primaryBg.darken(0.5);
