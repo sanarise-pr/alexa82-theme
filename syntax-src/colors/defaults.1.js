@@ -3,8 +3,8 @@ const palette = require('../../palette');
 module.exports = [
   {
     "settings": {
-      "foreground": palette.ansiWhite,
-      "background": palette.primaryBg
+      "foreground": palette.ansiWhite.alpha(0.99),
+      "background": palette.editorBg.alpha(0.99)
     }
   },
   {
@@ -37,7 +37,6 @@ module.exports = [
   {
     "scope": "comment",
     "settings": {
-      "fontStyle": "italic",
       "foreground": palette.comentsFg
     }
   },
@@ -77,7 +76,7 @@ module.exports = [
   {
     "scope": "entity.other.attribute-name",
     "settings": {
-      "foreground": palette.ansiMarine
+      "foreground": palette.ansiEmerald
     }
   },
   {
@@ -93,7 +92,7 @@ module.exports = [
       "entity.other.attribute-name.scss"
     ],
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.ansiBlue
     }
   },
   {
@@ -164,14 +163,21 @@ module.exports = [
   {
     "scope": "meta.selector",
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.ansiBlue
+    }
+  },
+  {
+    "name": "### Comma css",
+    "scope": "punctuation.separator.list.comma",
+    "settings": {
+      "foreground": palette.ansiWhite
     }
   },
   {
     "name": "brackets of XML/HTML tags",
     "scope": "punctuation.definition.tag",
     "settings": {
-      "foreground": palette.ansiMarine
+      "foreground": palette.ansiWhite
     }
   },
   {
@@ -201,25 +207,25 @@ module.exports = [
   {
     "scope": "storage",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
     }
   },
   {
     "scope": "storage.type",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
     }
   },
   {
     "scope": "storage.modifier",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
     }
   },
   {
     "scope": "string",
     "settings": {
-      "foreground": palette.ansiYellow
+      "foreground": "#a31515"
     }
   },
   {
@@ -247,7 +253,7 @@ module.exports = [
   {
     "scope": "string.regexp",
     "settings": {
-      "foreground": palette.regexpFg
+      "foreground": "#811f3f"
     }
   },
   {
@@ -258,7 +264,7 @@ module.exports = [
       "punctuation.section.embedded"
     ],
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
     }
   },
   {
@@ -268,6 +274,20 @@ module.exports = [
     ],
     "settings": {
       "foreground": "#000000"
+    }
+  },
+  {
+    "scope": [
+      "support.constant.property-value",
+      "support.constant.font-name",
+      "support.constant.media-type",
+      "support.constant.media",
+      "constant.other.color.rgb-value",
+      "constant.other.rgb-value",
+      "support.constant.color"
+    ],
+    "settings": {
+      "foreground": "#0451a5"
     }
   },
   {
@@ -292,13 +312,19 @@ module.exports = [
   {
     "scope": "keyword",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
+    }
+  },
+  {
+    "scope": "keyword.control",
+    "settings": {
+      "foreground": "#0000ff"
     }
   },
   {
     "scope": "keyword.operator",
     "settings": {
-      "foreground": palette.ansiBrightWhite
+      "foreground": "#000000"
     }
   },
   {
@@ -310,13 +336,13 @@ module.exports = [
       "keyword.operator.logical.python"
     ],
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
     }
   },
   {
     "scope": "keyword.other.unit",
     "settings": {
-      "foreground": palette.ansiOrange
+      "foreground": "#09885a"
     }
   },
   {
@@ -325,7 +351,7 @@ module.exports = [
       "punctuation.section.embedded.end.php"
     ],
     "settings": {
-      "foreground": palette.ansiOrange
+      "foreground": "#800000"
     }
   },
   {
@@ -337,7 +363,7 @@ module.exports = [
   {
     "scope": "constant.sha.git-rebase",
     "settings": {
-      "foreground": palette.ansiOrange
+      "foreground": "#09885a"
     }
   },
   {
@@ -355,7 +381,7 @@ module.exports = [
     "name": "this.self",
     "scope": "variable.language",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#0000ff"
     }
   },
   {
@@ -366,7 +392,7 @@ module.exports = [
       "support.constant.handlebars"
     ],
     "settings": {
-      "foreground": palette.ansiMagenta
+      "foreground": "#795E26"
     }
   },
   {
@@ -377,6 +403,11 @@ module.exports = [
       "support.type",
       "entity.name.type",
       "entity.name.class",
+      "storage.type.numeric.go",
+      "storage.type.byte.go",
+      "storage.type.boolean.go",
+      "storage.type.string.go",
+      "storage.type.uintptr.go",
       "storage.type.cs",
       "storage.type.generic.cs",
       "storage.type.modifier.cs",
@@ -397,7 +428,7 @@ module.exports = [
       "storage.type.primitive.groovy"
     ],
     "settings": {
-      "foreground": palette.ansiCyan
+      "foreground": "#267f99"
     }
   },
   {
@@ -418,7 +449,7 @@ module.exports = [
     "name": "Control flow keywords",
     "scope": "keyword.control",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#AF00DB"
     }
   },
   {
@@ -429,16 +460,7 @@ module.exports = [
       "support.variable"
     ],
     "settings": {
-      "foreground": palette.ansiWhite
-    }
-  },
-  {
-    "name": "Constant name",
-    "scope": [
-      "variable.other.constant"
-    ],
-    "settings": {
-      "foreground": palette.ansiGreen
+      "foreground": "#001080"
     }
   },
   {
@@ -447,7 +469,7 @@ module.exports = [
       "meta.object-literal.key"
     ],
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": "#001080"
     }
   },
   {
@@ -477,7 +499,7 @@ module.exports = [
       "support.other.parenthesis.regexp"
     ],
     "settings": {
-      "foreground": palette.ansiYellow
+      "foreground": "#d16969"
     }
   },
   {
@@ -488,13 +510,13 @@ module.exports = [
       "constant.character.set.regexp"
     ],
     "settings": {
-      "foreground": palette.regexpFg
+      "foreground": "#811f3f"
     }
   },
   {
     "scope": "keyword.operator.quantifier.regexp",
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": "#000000"
     }
   },
   {
@@ -503,7 +525,7 @@ module.exports = [
       "keyword.control.anchor.regexp"
     ],
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": "#ff0000"
     }
   },
   {
@@ -515,7 +537,7 @@ module.exports = [
   {
     "scope": "constant.character.escape",
     "settings": {
-      "foreground": palette.ansiOrange
+      "foreground": "#a31515"
     }
   },
   {

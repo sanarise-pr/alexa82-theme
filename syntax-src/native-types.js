@@ -7,13 +7,13 @@ log.title('Native Types');
 var stringFg = palette.ansiYellow;
 var numericFg = palette.ansiOrange;
 
-log.val('stringFg contrast', chroma.contrast(stringFg, palette.primaryBg));
+log.val('stringFg contrast', chroma.contrast(stringFg, palette.editorBg));
 
 module.exports = [
   {
     "settings": {
       "foreground": palette.ansiBrightWhite,
-      "background": palette.primaryBg
+      "background": palette.editorBg
     }
   },
   {

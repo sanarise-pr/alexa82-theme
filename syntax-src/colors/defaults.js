@@ -3,8 +3,8 @@ const palette = require('../../palette');
 module.exports = [
   {
     "settings": {
-      "foreground": palette.ansiWhite,
-      "background": palette.primaryBg
+      "foreground": palette.ansiWhite.alpha(0.99),
+      "background": palette.editorBg.alpha(0.99)
     }
   },
   {
@@ -29,7 +29,7 @@ module.exports = [
     }
   },
   {
-    "scope": "meta.diff.header",
+    "scope": "header",
     "settings": {
       "foreground": "#000080"
     }
@@ -62,16 +62,15 @@ module.exports = [
     }
   },
   {
-    "name": "css tags in selectors, xml tags",
     "scope": "entity.name.tag",
     "settings": {
       "foreground": palette.ansiMarine
     }
   },
   {
-    "scope": "entity.name.selector",
+    "scope": "entity.name.tag.css",
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.ansiMarine
     }
   },
   {
@@ -93,7 +92,7 @@ module.exports = [
       "entity.other.attribute-name.scss"
     ],
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.ansiBlue
     }
   },
   {
@@ -112,14 +111,14 @@ module.exports = [
     "scope": "markup.bold",
     "settings": {
       "fontStyle": "bold",
-      "foreground": "#000080"
+      "foreground": "#569cd6"
     }
   },
   {
     "scope": "markup.heading",
     "settings": {
       "fontStyle": "bold",
-      "foreground": "#800000"
+      "foreground": "#569cd6"
     }
   },
   {
@@ -131,40 +130,50 @@ module.exports = [
   {
     "scope": "markup.inserted",
     "settings": {
-      "foreground": "#09885a"
+      "foreground": "#b5cea8"
     }
   },
   {
     "scope": "markup.deleted",
     "settings": {
-      "foreground": "#a31515"
+      "foreground": "#ce9178"
     }
   },
   {
     "scope": "markup.changed",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#569cd6"
     }
   },
   {
-    "scope": [
-      "beginning.punctuation.definition.quote.markdown",
-      "beginning.punctuation.definition.list.markdown"
-    ],
+    "scope": "beginning.punctuation.definition.quote.markdown",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#608b4e"
+    }
+  },
+  {
+    "scope": "beginning.punctuation.definition.list.markdown",
+    "settings": {
+      "foreground": "#6796e6"
     }
   },
   {
     "scope": "markup.inline.raw",
     "settings": {
-      "foreground": "#800000"
+      "foreground": "#ce9178"
     }
   },
   {
     "scope": "meta.selector",
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.ansiBlue
+    }
+  },
+  {
+    "name": "### Comma css",
+    "scope": "punctuation.separator.list.comma",
+    "settings": {
+      "foreground": palette.ansiWhite
     }
   },
   {
@@ -177,25 +186,31 @@ module.exports = [
   {
     "scope": "meta.preprocessor",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": "#569cd6"
     }
   },
   {
     "scope": "meta.preprocessor.string",
     "settings": {
-      "foreground": "#a31515"
+      "foreground": "#ce9178"
     }
   },
   {
     "scope": "meta.preprocessor.numeric",
     "settings": {
-      "foreground": "#09885a"
+      "foreground": "#b5cea8"
     }
   },
   {
     "scope": "meta.structure.dictionary.key.python",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#9cdcfe"
+    }
+  },
+  {
+    "scope": "meta.diff.header",
+    "settings": {
+      "foreground": "#569cd6"
     }
   },
   {
@@ -214,7 +229,7 @@ module.exports = [
     "name": "### Function keyword",
     "scope": "storage.type.function",
     "settings": {
-      "foreground": palette.ansiBrightWhite
+      "foreground": palette.ansiMagenta
     }
   },
   {
@@ -230,23 +245,13 @@ module.exports = [
     }
   },
   {
-    "scope": [
-      "string.comment.buffered.block.jade",
-      "string.quoted.jade",
-      "string.interpolated.jade",
-      "string.unquoted.plain.in.yaml",
-      "string.unquoted.plain.out.yaml",
-      "string.unquoted.block.yaml",
-      "string.quoted.single.yaml",
-      "string.quoted.double.xml",
-      "string.quoted.single.xml",
-      "string.unquoted.cdata.xml",
-      "string.quoted.double.html",
-      "string.quoted.single.html",
-      "string.unquoted.html",
-      "string.quoted.single.handlebars",
-      "string.quoted.double.handlebars"
-    ],
+    "scope": "string.tag",
+    "settings": {
+      "foreground": palette.ansiYellow
+    }
+  },
+  {
+    "scope": "string.value",
     "settings": {
       "foreground": palette.ansiYellow
     }
@@ -274,7 +279,7 @@ module.exports = [
       "meta.template.expression"
     ],
     "settings": {
-      "foreground": "#000000"
+      "foreground": "#d4d4d4"
     }
   },
   {
@@ -287,19 +292,26 @@ module.exports = [
       "source.coffee.embedded"
     ],
     "settings": {
-      "foreground": "#ff0000"
+      "foreground": palette.ansiWhite
     }
   },
   {
+    "name": "### JSON property name",
     "scope": "support.type.property-name.json",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": palette.ansiWhite
     }
   },
   {
     "scope": "keyword",
     "settings": {
       "foreground": palette.ansiBlue
+    }
+  },
+  {
+    "scope": "keyword.control",
+    "settings": {
+      "foreground": palette.ansiMagenta
     }
   },
   {
@@ -338,13 +350,13 @@ module.exports = [
   {
     "scope": "support.function.git-rebase",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#9cdcfe"
     }
   },
   {
     "scope": "constant.sha.git-rebase",
     "settings": {
-      "foreground": palette.ansiOrange
+      "foreground": "#b5cea8"
     }
   },
   {
@@ -355,7 +367,7 @@ module.exports = [
       "storage.modifier.package.java"
     ],
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": "#d4d4d4"
     }
   },
   {
@@ -373,18 +385,6 @@ module.exports = [
       "support.constant.handlebars"
     ],
     "settings": {
-      "foreground": palette.ansiCherry
-    }
-  },
-  {
-    "name": "### Function call",
-    "scope": [
-      "meta.function-call entity.name.function",
-      "meta.method-call entity.name.function",
-      "meta.function-call support.function",
-      "meta.method-call support.function"
-    ],
-    "settings": {
       "foreground": palette.ansiMagenta
     }
   },
@@ -396,6 +396,11 @@ module.exports = [
       "support.type",
       "entity.name.type",
       "entity.name.class",
+      "storage.type.numeric.go",
+      "storage.type.byte.go",
+      "storage.type.boolean.go",
+      "storage.type.string.go",
+      "storage.type.uintptr.go",
       "storage.type.cs",
       "storage.type.generic.cs",
       "storage.type.modifier.cs",
@@ -430,7 +435,7 @@ module.exports = [
       "entity.other.inherited-class"
     ],
     "settings": {
-      "foreground": palette.ansiMarine
+      "foreground": palette.ansiCyan
     }
   },
   {
@@ -481,7 +486,7 @@ module.exports = [
       "support.constant.color"
     ],
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": palette.ansiMagenta
     }
   },
   {
@@ -511,12 +516,6 @@ module.exports = [
     }
   },
   {
-    "scope": "keyword.operator.quantifier.regexp",
-    "settings": {
-      "foreground": palette.ansiWhite
-    }
-  },
-  {
     "scope": [
       "keyword.operator.or.regexp",
       "keyword.control.anchor.regexp"
@@ -526,9 +525,15 @@ module.exports = [
     }
   },
   {
+    "scope": "keyword.operator.quantifier.regexp",
+    "settings": {
+      "foreground": palette.ansiWhite
+    }
+  },
+  {
     "scope": "constant.character",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": "#569cd6"
     }
   },
   {
@@ -540,7 +545,7 @@ module.exports = [
   {
     "scope": "token.info-token",
     "settings": {
-      "foreground": "#316bcd"
+      "foreground": "#6796e6"
     }
   },
   {
@@ -552,13 +557,13 @@ module.exports = [
   {
     "scope": "token.error-token",
     "settings": {
-      "foreground": "#cd3131"
+      "foreground": "#f44747"
     }
   },
   {
     "scope": "token.debug-token",
     "settings": {
-      "foreground": "#800080"
+      "foreground": "#b267e6"
     }
   }
 ];

@@ -8,6 +8,7 @@ const workbenchDefaults = require('./wb-src/colors/defaults');
 
 let settings = stringifyColors(Object.assign({}, ...[
   require('./wb-src/base'),
+  require('./wb-src/text'),
   require('./wb-src/input-control'),
   require('./wb-src/scroll-bar'),
   require('./wb-src/lists-and-trees'),
@@ -19,8 +20,10 @@ let settings = stringifyColors(Object.assign({}, ...[
   require('./wb-src/editor-warnings.js'),
   require('./wb-src/editor-gutter.js'),
   require('./wb-src/editor-widget.js'),
+  require('./wb-src/panel'),
   require('./wb-src/status-bar'),
   require('./wb-src/title-bar'),
+  require('./wb-src/terminal'),
   require('./wb-src/git')
 ]));
 writeSettings(SETTINGS_FILE, Object.assign({}, workbenchDefaults, settings));

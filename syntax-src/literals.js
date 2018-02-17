@@ -6,7 +6,7 @@ log.title('Literals');
 
 var objectKeyFg = palette.ansiWhite;
 
-log.val('propNameFg contrast', chroma.contrast(objectKeyFg, palette.primaryBg));
+log.val('propNameFg contrast', chroma.contrast(objectKeyFg, palette.editorBg));
 
 module.exports = [
   {

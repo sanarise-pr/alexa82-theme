@@ -6,7 +6,7 @@ log.title("Comments");
 
 let fg = palette.comentsFg;
 
-log.val('contrast', chroma.contrast(fg, palette.primaryBg));
+log.val('contrast', chroma.contrast(fg, palette.editorBg));
 
 module.exports = [
   {
