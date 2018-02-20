@@ -25,7 +25,7 @@ module.exports = {
   // 'editorGroup.background': chroma('orange'),
   // 'editorGroup.border': groupBorder, // 1px vertical line between groups
   // 'editorGroup.dropBackground': chroma('hotpink'),
-  // 'editorGroupHeader.noTabsBackground': noTabsBg,
+  'editorGroupHeader.noTabsBackground': palette.tabs.noTabsBg,
   'editorGroupHeader.tabsBackground': palette.tabs.groupTabsBg,
   // 'editorGroupHeader.tabsBorder': tabBorder, // 1px bottom border
   'tab.activeBackground': palette.tabs.activeBg,

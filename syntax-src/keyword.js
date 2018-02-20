@@ -8,20 +8,13 @@ module.exports = [
   {
     "scope": "keyword",
     "settings": {
-      "foreground": palette.ansiBlue
-    }
-  },
-  {
-    "name": "Control flow keywords",
-    "scope": "keyword.control",
-    "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "keyword.operator",
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": palette.colors.brightWhite
     }
   },
   {
@@ -33,13 +26,30 @@ module.exports = [
       "keyword.operator.logical.python"
     ],
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.blue
     }
   },
   {
-    "scope": "keyword.other.unit",
+    "scope": [
+      "punctuation.section.embedded.begin.php",
+      "punctuation.section.embedded.end.php"
+    ],
     "settings": {
-      "foreground": "#b5cea8"
+      "foreground": palette.colors.orange
+    }
+  },
+  {
+    "name": "Control flow keywords",
+    "scope": "keyword.control",
+    "settings": {
+      "foreground": palette.colors.blue
+    }
+  },
+  {
+    "name": "Debugger keyword",
+    "scope": "keyword.other.debugger",
+    "settings": {
+      "foreground": palette.colors.cherry
     }
   }
 ];

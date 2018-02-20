@@ -6,23 +6,32 @@ log.title('Storage');
 
 module.exports = [
   {
-    "name": "Storage",
     "scope": "storage",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.cyan
     }
   },
   {
-    "name": "Storage type",
     "scope": "storage.type",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.cyan
     }
   },
   {
     "scope": "storage.modifier",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.cyan
+    }
+  },
+  {
+    "name": "coloring of the Java import and package identifiers",
+    "scope": [
+      "storage.modifier.import.java",
+      "variable.language.wildcard.java",
+      "storage.modifier.package.java"
+    ],
+    "settings": {
+      "foreground": "#d4d4d4"
     }
   }
 ];

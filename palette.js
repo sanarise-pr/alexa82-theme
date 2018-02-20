@@ -4,24 +4,31 @@ const chroma = require('chroma-js');
 log.title('Palette');
 
 let colors = {
-  red: chroma('e06c75'),
-  green: chroma('9ac181'),
-  yellow: chroma('d6c294'),
-  blue: chroma('61afef'),
+  brightYellow: chroma("dcdcaa"),
+  brightBlue: chroma("9cdcfe"),
+  brightWhite: chroma('eeeeee'),
+
+  red: chroma('e06c75').darken(0.2),
+  green: chroma('9ac181').darken(0.1),
+  yellow: chroma('d6c294').darken(0.2),
+  blue: chroma('61afef').darken(0.2),
   magenta: chroma('ca90d0'),
-  cyan: chroma('56b6c2'),
-  white: chroma('bec2ca'),
+  cyan: chroma('56b6c2').brighten(0.2),
+  white: chroma('d4d4d4').darken(0.2),
   
+  raspberry: chroma('ef61c2').desaturate(2).darken(0.2),
   orange: chroma('D19A66'),
-  marine: chroma("93A1D2"),
-  cherry: chroma("c18190"),
-  emerald: chroma("81c196"),
+  marine: chroma("93A1D2").darken(0.2),
+  cherry: chroma('e06c75').set('hsl.h', '+10').desaturate().brighten(0.5),
+  emerald: chroma("81c196").darken(0.2),
 };
 
 // ########################### EDITOR ###########################
 let editor = {};
 editor.bg = chroma('282c34') //333945 343d46
   .set('hsl.h', '+10').darken(0.1); 
+editor.selectionBg = editor.bg.brighten();
+editor.cursorFg = colors.orange;
 
 // ########################### SIDE BAR ###########################
 let sideBar = {};
@@ -46,7 +53,8 @@ panel.bg = editor.bg.brighten(0.15);
 // ########################### TABS ###########################
 let tabs = {};
 tabs.activeBg = editor.bg;
-tabs.inactiveBg = editor.bg.brighten(0.45);
+tabs.inactiveBg = editor.bg.brighten(0.3);
+tabs.noTabsBg = editor.bg.brighten(0.3);
 tabs.groupTabsBg = editor.bg.brighten(0.45);
 
 // ########################### TITLE BAR ###########################
@@ -58,9 +66,20 @@ titleBar.inactiveBg = editor.bg.brighten(0.8);
 let statusBar = {};
 statusBar.bg = editor.bg.brighten(1.2);
 
+// ########################### SCROLL BAR ###########################
+let scrollBar = {};
+scrollBar.bg = editor.bg.brighten(4).saturate(0.2).alpha(0.15);
+log.val('scroll.bg', scrollBar.bg.hex());
+
 // ########################### TERMINAL ###########################
 let terminal = {};
 terminal.bg = panel.bg.desaturate(0.1).darken(0.4);
+
+// ########################### SYNTAX ###########################
+let syntax = {};
+syntax.comments = editor.bg.brighten(2.2);
+log.val('coments-editor', chroma.contrast(editor.bg, syntax.comments).toFixed(2));
+log.val('coments-white', chroma.contrast(colors.white, syntax.comments).toFixed(2));
 
 // let groundBg = editorBg.brighten(1.4).desaturate(0.15);
 // log.val('groundBg', groundBg.hex());
@@ -137,5 +156,7 @@ module.exports = {
   activityBar: activityBar,
   titleBar: titleBar,
   statusBar: statusBar,
-  terminal: terminal
+  scrollBar: scrollBar,
+  terminal: terminal,
+  syntax: syntax
 };

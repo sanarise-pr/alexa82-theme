@@ -3,8 +3,8 @@ const palette = require('../../palette');
 module.exports = [
   {
     "settings": {
-      "foreground": palette.ansiWhite.alpha(0.99),
-      "background": palette.editorBg.alpha(0.99)
+      "foreground": palette.colors.white.alpha(0.99),
+      "background": palette.editor.bg.alpha(0.99)
     }
   },
   {
@@ -13,7 +13,7 @@ module.exports = [
       "source.groovy.embedded"
     ],
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": palette.colors.white
     }
   },
   {
@@ -29,7 +29,7 @@ module.exports = [
     }
   },
   {
-    "scope": "meta.diff.header",
+    "scope": "header",
     "settings": {
       "foreground": "#000080"
     }
@@ -37,13 +37,14 @@ module.exports = [
   {
     "scope": "comment",
     "settings": {
-      "foreground": palette.comentsFg
+      "fontStyle": "italic",
+      "foreground": palette.syntax.comments
     }
   },
   {
     "scope": "constant.language",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.blue
     }
   },
   {
@@ -51,32 +52,31 @@ module.exports = [
       "constant.numeric"
     ],
     "settings": {
-      "foreground": palette.ansiOrange
+      "foreground": palette.colors.orange
     }
   },
   {
     "scope": "constant.regexp",
     "settings": {
-      "foreground": palette.regexpFg
+      "foreground": palette.colors.orange
     }
   },
   {
-    "name": "css tags in selectors, xml tags",
     "scope": "entity.name.tag",
     "settings": {
-      "foreground": palette.ansiMarine
+      "foreground": palette.colors.marine
     }
   },
   {
-    "scope": "entity.name.selector",
+    "scope": "entity.name.tag.css",
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.colors.marine
     }
   },
   {
     "scope": "entity.other.attribute-name",
     "settings": {
-      "foreground": palette.ansiEmerald
+      "foreground": palette.colors.emerald
     }
   },
   {
@@ -92,13 +92,13 @@ module.exports = [
       "entity.other.attribute-name.scss"
     ],
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "invalid",
     "settings": {
-      "foreground": palette.ansiRed
+      "foreground": palette.colors.red
     }
   },
   {
@@ -111,14 +111,14 @@ module.exports = [
     "scope": "markup.bold",
     "settings": {
       "fontStyle": "bold",
-      "foreground": "#000080"
+      "foreground": "#569cd6"
     }
   },
   {
     "scope": "markup.heading",
     "settings": {
       "fontStyle": "bold",
-      "foreground": "#800000"
+      "foreground": "#569cd6"
     }
   },
   {
@@ -130,130 +130,150 @@ module.exports = [
   {
     "scope": "markup.inserted",
     "settings": {
-      "foreground": "#09885a"
+      "foreground": "#b5cea8"
     }
   },
   {
     "scope": "markup.deleted",
     "settings": {
-      "foreground": "#a31515"
+      "foreground": "#ce9178"
     }
   },
   {
     "scope": "markup.changed",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#569cd6"
     }
   },
   {
-    "scope": [
-      "beginning.punctuation.definition.quote.markdown",
-      "beginning.punctuation.definition.list.markdown"
-    ],
+    "scope": "beginning.punctuation.definition.quote.markdown",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#608b4e"
+    }
+  },
+  {
+    "scope": "beginning.punctuation.definition.list.markdown",
+    "settings": {
+      "foreground": "#6796e6"
     }
   },
   {
     "scope": "markup.inline.raw",
     "settings": {
-      "foreground": "#800000"
+      "foreground": "#ce9178"
     }
   },
   {
     "scope": "meta.selector",
     "settings": {
-      "foreground": palette.ansiBlue
+      "foreground": palette.colors.blue
     }
   },
   {
     "name": "### Comma css",
     "scope": "punctuation.separator.list.comma",
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": palette.colors.white
     }
   },
   {
     "name": "brackets of XML/HTML tags",
     "scope": "punctuation.definition.tag",
     "settings": {
-      "foreground": palette.ansiWhite
+      "foreground": palette.colors.marine
+    }
+  },
+  {
+    "name": "### Doctype",
+    "scope": "meta.tag.sgml.doctype",
+    "settings": {
+      "foreground": palette.colors.yellow
+    }
+  },
+  {
+    "name": "### Tag",
+    "scope": "meta.tag",
+    "settings": {
+      "foreground": palette.colors.white
     }
   },
   {
     "scope": "meta.preprocessor",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": "#569cd6"
     }
   },
   {
     "scope": "meta.preprocessor.string",
     "settings": {
-      "foreground": "#a31515"
+      "foreground": "#ce9178"
     }
   },
   {
     "scope": "meta.preprocessor.numeric",
     "settings": {
-      "foreground": "#09885a"
+      "foreground": "#b5cea8"
     }
   },
   {
     "scope": "meta.structure.dictionary.key.python",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#9cdcfe"
+    }
+  },
+  {
+    "scope": "meta.diff.header",
+    "settings": {
+      "foreground": "#569cd6"
     }
   },
   {
     "scope": "storage",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "storage.type",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.blue
+    }
+  },
+  {
+    "name": "### Function keyword",
+    "scope": "storage.type.function",
+    "settings": {
+      "foreground": palette.colors.magenta
     }
   },
   {
     "scope": "storage.modifier",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.white
     }
   },
   {
     "scope": "string",
     "settings": {
-      "foreground": "#a31515"
+      "foreground": palette.colors.yellow
     }
   },
   {
-    "scope": [
-      "string.comment.buffered.block.jade",
-      "string.quoted.jade",
-      "string.interpolated.jade",
-      "string.unquoted.plain.in.yaml",
-      "string.unquoted.plain.out.yaml",
-      "string.unquoted.block.yaml",
-      "string.quoted.single.yaml",
-      "string.quoted.double.xml",
-      "string.quoted.single.xml",
-      "string.unquoted.cdata.xml",
-      "string.quoted.double.html",
-      "string.quoted.single.html",
-      "string.unquoted.html",
-      "string.quoted.single.handlebars",
-      "string.quoted.double.handlebars"
-    ],
+    "scope": "string.tag",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.yellow
+    }
+  },
+  {
+    "scope": "string.value",
+    "settings": {
+      "foreground": palette.colors.yellow
     }
   },
   {
     "scope": "string.regexp",
     "settings": {
-      "foreground": "#811f3f"
+      "foreground": palette.colors.orange
     }
   },
   {
@@ -264,7 +284,7 @@ module.exports = [
       "punctuation.section.embedded"
     ],
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.blue
     }
   },
   {
@@ -273,21 +293,7 @@ module.exports = [
       "meta.template.expression"
     ],
     "settings": {
-      "foreground": "#000000"
-    }
-  },
-  {
-    "scope": [
-      "support.constant.property-value",
-      "support.constant.font-name",
-      "support.constant.media-type",
-      "support.constant.media",
-      "constant.other.color.rgb-value",
-      "constant.other.rgb-value",
-      "support.constant.color"
-    ],
-    "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#d4d4d4"
     }
   },
   {
@@ -300,31 +306,32 @@ module.exports = [
       "source.coffee.embedded"
     ],
     "settings": {
-      "foreground": "#ff0000"
+      "foreground": palette.colors.white
     }
   },
   {
+    "name": "### JSON property name",
     "scope": "support.type.property-name.json",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": palette.colors.white
     }
   },
   {
     "scope": "keyword",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "keyword.control",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.magenta
     }
   },
   {
     "scope": "keyword.operator",
     "settings": {
-      "foreground": "#000000"
+      "foreground": palette.colors.brightWhite
     }
   },
   {
@@ -336,13 +343,13 @@ module.exports = [
       "keyword.operator.logical.python"
     ],
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "keyword.other.unit",
     "settings": {
-      "foreground": "#09885a"
+      "foreground": palette.colors.orange
     }
   },
   {
@@ -351,19 +358,19 @@ module.exports = [
       "punctuation.section.embedded.end.php"
     ],
     "settings": {
-      "foreground": "#800000"
+      "foreground": palette.colors.orange
     }
   },
   {
     "scope": "support.function.git-rebase",
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": "#9cdcfe"
     }
   },
   {
     "scope": "constant.sha.git-rebase",
     "settings": {
-      "foreground": "#09885a"
+      "foreground": "#b5cea8"
     }
   },
   {
@@ -374,14 +381,14 @@ module.exports = [
       "storage.modifier.package.java"
     ],
     "settings": {
-      "foreground": "#000000"
+      "foreground": "#d4d4d4"
     }
   },
   {
     "name": "this.self",
     "scope": "variable.language",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": palette.colors.blue
     }
   },
   {
@@ -392,7 +399,7 @@ module.exports = [
       "support.constant.handlebars"
     ],
     "settings": {
-      "foreground": "#795E26"
+      "foreground": palette.colors.magenta
     }
   },
   {
@@ -428,7 +435,7 @@ module.exports = [
       "storage.type.primitive.groovy"
     ],
     "settings": {
-      "foreground": "#267f99"
+      "foreground": palette.colors.cyan
     }
   },
   {
@@ -442,14 +449,14 @@ module.exports = [
       "entity.other.inherited-class"
     ],
     "settings": {
-      "foreground": "#267f99"
+      "foreground": palette.colors.cyan
     }
   },
   {
     "name": "Control flow keywords",
     "scope": "keyword.control",
     "settings": {
-      "foreground": "#AF00DB"
+      "foreground": palette.colors.blue
     }
   },
   {
@@ -460,7 +467,16 @@ module.exports = [
       "support.variable"
     ],
     "settings": {
-      "foreground": "#001080"
+      "foreground": palette.colors.white
+    }
+  },
+  {
+    "name": "### Constant name",
+    "scope": [
+      "variable.other.constant"
+    ],
+    "settings": {
+      "foreground": palette.colors.green
     }
   },
   {
@@ -469,7 +485,7 @@ module.exports = [
       "meta.object-literal.key"
     ],
     "settings": {
-      "foreground": "#001080"
+      "foreground": palette.colors.white
     }
   },
   {
@@ -484,7 +500,7 @@ module.exports = [
       "support.constant.color"
     ],
     "settings": {
-      "foreground": "#0451a5"
+      "foreground": palette.colors.magenta
     }
   },
   {
@@ -499,7 +515,7 @@ module.exports = [
       "support.other.parenthesis.regexp"
     ],
     "settings": {
-      "foreground": "#d16969"
+      "foreground": palette.colors.yellow
     }
   },
   {
@@ -510,13 +526,7 @@ module.exports = [
       "constant.character.set.regexp"
     ],
     "settings": {
-      "foreground": "#811f3f"
-    }
-  },
-  {
-    "scope": "keyword.operator.quantifier.regexp",
-    "settings": {
-      "foreground": "#000000"
+      "foreground": palette.colors.orange
     }
   },
   {
@@ -525,25 +535,31 @@ module.exports = [
       "keyword.control.anchor.regexp"
     ],
     "settings": {
-      "foreground": "#ff0000"
+      "foreground": palette.colors.blue
+    }
+  },
+  {
+    "scope": "keyword.operator.quantifier.regexp",
+    "settings": {
+      "foreground": palette.colors.white
     }
   },
   {
     "scope": "constant.character",
     "settings": {
-      "foreground": "#0000ff"
+      "foreground": "#569cd6"
     }
   },
   {
     "scope": "constant.character.escape",
     "settings": {
-      "foreground": "#a31515"
+      "foreground": palette.colors.orange
     }
   },
   {
     "scope": "token.info-token",
     "settings": {
-      "foreground": "#316bcd"
+      "foreground": "#6796e6"
     }
   },
   {
@@ -555,13 +571,13 @@ module.exports = [
   {
     "scope": "token.error-token",
     "settings": {
-      "foreground": "#cd3131"
+      "foreground": "#f44747"
     }
   },
   {
     "scope": "token.debug-token",
     "settings": {
-      "foreground": "#800080"
+      "foreground": "#b267e6"
     }
   }
 ];

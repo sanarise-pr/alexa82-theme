@@ -6,6 +6,13 @@ log.title('Function');
 
 module.exports = [
   {
+    "name": "Function keyword #new",
+    "scope": "storage.type.function",
+    "settings": {
+      "foreground": palette.colors.magenta.brighten(0.5)
+    }
+  },
+  {
     "name": "Function declarations",
     "scope": [
       "entity.name.function",
@@ -13,15 +20,7 @@ module.exports = [
       "support.constant.handlebars"
     ],
     "settings": {
-      "foreground": palette.ansiMagenta
+      "foreground": palette.colors.brightBlue
     }
-  },
-  {
-    "name": "Function argument",
-    "scope": "variable.parameter",
-    "settings": {
-      "fontStyle": "underline",
-      "foreground": palette.ansiWhite
-    }
-  },
+  }
 ];

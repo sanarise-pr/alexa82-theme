@@ -7,12 +7,17 @@ const clc = require('cli-color');
 const syntaxDefaults = require('./syntax-src/colors/defaults');
 
 let settings = syntaxDefaults.concat(...[
-  // require('./syntax-src/native-types'),
-  // require('./syntax-src/comment'),
-  // require('./syntax-src/function'),
-  // require('./syntax-src/keyword'),
-  // require('./syntax-src/literals'),
-  // require('./syntax-src/storage')
+  require('./syntax-src/common'),
+  require('./syntax-src/css'),
+  require('./syntax-src/function'),
+  require('./syntax-src/keyword'),
+  require('./syntax-src/markup'),
+  require('./syntax-src/meta'),
+  require('./syntax-src/regexp'),
+  require('./syntax-src/storage'),
+  require('./syntax-src/string'),
+  require('./syntax-src/tag'),
+  require('./syntax-src/var')
 ]);
 stringifyColors(settings);
 writeSettings(SETTINGS_FILE, settings);

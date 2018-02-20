@@ -22,34 +22,34 @@ module.exports = {
   "editor.background": palette.editor.bg,
   // "editor.foreground": palette.ansiWhite, // цвет надписи при наведении на карандаш в настройках
   // "editorLineNumber.foreground": lineNumbers,
-  // // "editorCursor.background": chroma('yellow'), // цвет символа под блочным курсором
-  // "editorCursor.foreground": palette.cursorFg,
+  // "editorCursor.background": chroma('yellow'), // цвет символа под блочным курсором
+  "editorCursor.foreground": palette.editor.cursorFg,
 
-  // "editor.selectionBackground": selectionBg,
-  // // "editor.selectionForeground": chroma('00ffff'),
-  // // "editor.selectionHighlightBackground": chroma('3e4551'),
-  // // "editor.inactiveSelectionBackground": chroma('333842'),
+  "editor.selectionBackground": palette.editor.selectionBg,
+  // "editor.selectionForeground": chroma('00ffff'),
+  // "editor.selectionHighlightBackground": chroma('3e4551'),
+  // "editor.inactiveSelectionBackground": chroma('333842'),
 
-  // // "editor.wordHighlightBackground": chroma('00ffff'),
-  // // "editor.wordHighlightBackground": chroma('333842'), // todo
-  // // "editor.wordHighlightStrongBackground": chroma('00ffff'),
+  // "editor.wordHighlightBackground": chroma('00ffff'),
+  // "editor.wordHighlightBackground": chroma('333842'), // todo
+  // "editor.wordHighlightStrongBackground": chroma('00ffff'),
 
-  // // "editor.findMatchBackground": chroma('00ffff'), // результаты текстового поиска
-  // // "editor.findMatchHighlightBackground": chroma('00ffff'),
-  // // "editor.findRangeHighlightBackground": chroma('00ffff'),
+  // "editor.findMatchBackground": chroma('00ffff'), // результаты текстового поиска
+  // "editor.findMatchHighlightBackground": chroma('00ffff'),
+  // "editor.findRangeHighlightBackground": chroma('00ffff'),
 
-  // // "editor.hoverHighlightBackground": chroma('00ffff'), // цвет выделения для текста с подсказкой
+  // "editor.hoverHighlightBackground": chroma('00ffff'), // цвет выделения для текста с подсказкой
 
   // "editor.lineHighlightBackground": lineHighlightBg,
   // "editor.lineHighlightBorder": lineHighlightBg,
 
-  // // "editorLink.activeForeground": chroma('00ffff'),
+  // "editorLink.activeForeground": chroma('00ffff'),
 
-  // // "editor.rangeHighlightBackground": chroma('00ffff'),
-  // // "editorWhitespace.foreground": chroma('303641'),
+  // "editor.rangeHighlightBackground": chroma('00ffff'),
+  // "editorWhitespace.foreground": chroma('303641'),
   // "editorIndentGuide.background": guides, // направляющие отступов
   // "editorRuler.foreground": ruler, // ограничения длины строки
-  // // "editorCodeLens.foreground": chroma('505762'),
+  // "editorCodeLens.foreground": chroma('505762'),
 
   // "editorBracketMatch.background": bracketBg,
   // "editorBracketMatch.border": bracketBorder,
