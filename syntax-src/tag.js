@@ -11,12 +11,6 @@ module.exports = [
       "foreground": palette.colors.marine
     }
   },
-  // {
-  //   "scope": "entity.name.tag.css",
-  //   "settings": {
-  //     "foreground": palette.colors.marine
-  //   }
-  // },
   {
     "scope": "entity.other.attribute-name",
     "settings": {

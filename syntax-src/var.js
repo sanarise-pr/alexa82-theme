@@ -13,20 +13,22 @@ module.exports = [
       "support.variable"
     ],
     "settings": {
-      "foreground": palette.colors.white
+      "foreground": palette.colors.cyan.desaturate(0.3).brighten(0.2)
     }
   },
   {
     "name": "Support variable #override",
     "scope": "support.variable",
     "settings": {
+      "fontStyle": "italic",
       "foreground": palette.colors.marine
     }
   },
   {
-    "name": "Support variable property #override",
-    "scope": "support.variable.property",
+    "name": "Property",
+    "scope": "support.variable.property, variable.other.property, variable.other.object.property",
     "settings": {
+      "fontStyle": "",
       "foreground": palette.colors.white
     }
   },
@@ -63,7 +65,7 @@ module.exports = [
       "storage.type.primitive.groovy"
     ],
     "settings": {
-      "foreground": palette.colors.cherry
+      "foreground": palette.colors.orange
     }
   },
   {
@@ -84,7 +86,7 @@ module.exports = [
     "name": "#override Inherited class",
     "scope": "entity.other.inherited-class",
     "settings": {
-      "foreground": palette.colors.cherry.darken(0.5)
+      "foreground": palette.colors.orange.darken(0.5)
     }
   },
   {

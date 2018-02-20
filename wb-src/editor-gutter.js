@@ -4,12 +4,8 @@ const chroma = require('chroma-js');
 
 log.title("Editor Gutter");
 
-// let bg = palette.editorBg;
-
-// log.val("contrast", chroma.contrast(bg, fg).toFixed(2));
-
 module.exports = {
-  // "editorGutter.modifiedBackground": palette.ansiOrange.desaturate(0.5).darken(1.5),
-  // "editorGutter.addedBackground": palette.ansiGreen.desaturate(0.5).darken(1.5),
+  "editorGutter.modifiedBackground": palette.editorGutter.modifiedBg,
+  "editorGutter.addedBackground": palette.editorGutter.addedBg,
   // "editorGutter.deletedBackground": palette.ansiRed.desaturate(0.5).darken(),
 };

@@ -29,7 +29,7 @@ module.exports = [
       "support.other.parenthesis.regexp"
     ],
     "settings": {
-      "foreground": palette.colors.yellow
+      "foreground": palette.colors.white
     }
   },
   {
@@ -40,7 +40,7 @@ module.exports = [
       "constant.character.set.regexp"
     ],
     "settings": {
-      "foreground": palette.colors.orange
+      "foreground": palette.colors.yellow
     }
   },
   {
@@ -55,7 +55,7 @@ module.exports = [
   {
     "scope": "keyword.operator.quantifier.regexp",
     "settings": {
-      "foreground": palette.colors.white
+      "foreground": palette.colors.orange
     }
   }
 ];

@@ -8,7 +8,7 @@ module.exports = [
   {
     "scope": "meta.selector",
     "settings": {
-      "foreground": "#d7ba7d"
+      "foreground": palette.colors.raspberry.brighten()
     }
   },
   {

@@ -29,7 +29,7 @@ module.exports = [
   //   "name": "Variable start #new",
   //   "scope": "punctuation.definition.variable",
   //   "settings": {
-  //     "foreground": palette.colors.brightWhite
+  //     "foreground": palette.colors.blue
   //   }
   // },
   {
@@ -74,6 +74,13 @@ module.exports = [
     "scope": "punctuation.separator.list.comma",
     "settings": {
       "foreground": palette.colors.white
+    }
+  },
+  {
+    "name": "Tags in css #new",
+    "scope": "entity.name.tag.css",
+    "settings": {
+      "foreground": palette.colors.marine.brighten(0.8)
     }
   }
 ];

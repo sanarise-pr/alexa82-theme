@@ -14,7 +14,7 @@ module.exports = [
   {
     "scope": "keyword.operator",
     "settings": {
-      "foreground": palette.colors.brightWhite
+      "foreground": palette.colors.white.brighten(0.5)
     }
   },
   {
@@ -35,7 +35,7 @@ module.exports = [
       "punctuation.section.embedded.end.php"
     ],
     "settings": {
-      "foreground": palette.colors.orange
+      "foreground": palette.colors.cherry
     }
   },
   {
@@ -49,7 +49,7 @@ module.exports = [
     "name": "Debugger keyword",
     "scope": "keyword.other.debugger",
     "settings": {
-      "foreground": palette.colors.cherry
+      "foreground": palette.colors.cherry.darken(0.5)
     }
   }
 ];

@@ -5,8 +5,7 @@ log.title('Palette');
 
 let colors = {
   brightYellow: chroma("dcdcaa"),
-  brightBlue: chroma("9cdcfe"),
-  brightWhite: chroma('eeeeee'),
+  brightBlue: chroma("9cdcfe").set('hsl.h', '+5'),
 
   red: chroma('e06c75').darken(0.2),
   green: chroma('9ac181').darken(0.1),
@@ -14,10 +13,10 @@ let colors = {
   blue: chroma('61afef').darken(0.2),
   magenta: chroma('ca90d0'),
   cyan: chroma('56b6c2').brighten(0.2),
-  white: chroma('d4d4d4').darken(0.2),
+  white: chroma('c2c2c2'),
   
   raspberry: chroma('ef61c2').desaturate(2).darken(0.2),
-  orange: chroma('D19A66'),
+  orange: chroma('D19A66').brighten(0.2).desaturate(0.1),
   marine: chroma("93A1D2").darken(0.2),
   cherry: chroma('e06c75').set('hsl.h', '+10').desaturate().brighten(0.5),
   emerald: chroma("81c196").darken(0.2),
@@ -28,7 +27,13 @@ let editor = {};
 editor.bg = chroma('282c34') //333945 343d46
   .set('hsl.h', '+10').darken(0.1); 
 editor.selectionBg = editor.bg.brighten();
-editor.cursorFg = colors.orange;
+editor.cursorFg = colors.red;
+
+// ########################### EDITOR GUTTER ###########################
+
+let editorGutter = {};
+editorGutter.modifiedBg = colors.orange.desaturate(0.5).darken(1.5);
+editorGutter.addedBg = colors.emerald.desaturate(0.5).darken(1.5);
 
 // ########################### SIDE BAR ###########################
 let sideBar = {};
@@ -149,6 +154,7 @@ log.val('coments-white', chroma.contrast(colors.white, syntax.comments).toFixed(
 module.exports = {
   colors: colors,
   editor: editor,
+  editorGutter: editorGutter,
   sideBar: sideBar,
   list: list,
   panel: panel,

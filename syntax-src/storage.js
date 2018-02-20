@@ -8,19 +8,19 @@ module.exports = [
   {
     "scope": "storage",
     "settings": {
-      "foreground": palette.colors.cyan
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "storage.type",
     "settings": {
-      "foreground": palette.colors.cyan
+      "foreground": palette.colors.blue
     }
   },
   {
     "scope": "storage.modifier",
     "settings": {
-      "foreground": palette.colors.cyan
+      "foreground": palette.colors.blue
     }
   },
   {
