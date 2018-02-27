@@ -1,4 +1,3 @@
-# alexa82-theme
+# nocturnal-theme
 
-Alexa82 theme for VS Code.
-It's a perfect theme in retro style.
+Nocturnal theme for VS Code.
